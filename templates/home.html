@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- Background Image -->
+    <header>
+        <div id="intro-example" class="p-5 text-center bg-image shadow-2-strong">
+            <div class="mask"> <!-- style="background-color: rgba(0, 0, 0, 0.1);"> -->
+                {% if user.id is None %}
+                <div class="text-black-50" style="text-transform: uppercase; display: flex !important; position: absolute; left: 260px; top: 335px;">
+                    <h2 class="mb-3" style="color: #222;">Welcome guest!</h2>
+                </div>
+                {% else %}
+                <div class="text-black-50" style="text-transform: uppercase; display: flex !important; position: absolute; left: 260px; top: 335px;">
+                    <h2 class="mb-3" style="color: #222;">Welcome {{ user.first_name }}!</h2>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+{% endblock %}

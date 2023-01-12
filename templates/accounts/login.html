@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+{% if request.GET.command == 'verification' %}
+<div id="verification-example" class="main bg-image shadow-2-strong" >
+    <div class="registration-container alert alert-info" role="alert" style="height: 200px;">
+        Thank you for registering with us. We have sent you verification email to your email address [{{request.GET.email}}] Please verify it.
+<br><br>
+Already verified? <a href="{% url 'login' %}">Login</a>
+    </div>
+</div>
+
+{% else %}
+
+    <div id="registration-example" class="main bg-image shadow-2-strong" >
+        <div class="registration-container" style="height: 550px;">
+            <form action="{% url 'login' %}" method="POST" id="appointment-form">
+                {% csrf_token %}
+                <h2>Login here chef !</h2>
+                {% include 'includes/alerts.html' %}
+                <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email Address" name="email">
+                </div>
+                <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" name="password">
+                </div>
+
+                <div class="form-group">
+                    <a href="#" class="float-right">Forgot password?</a>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit btn-primary" style="margin-top: 60px;">   Login   </button>
+                </div>
+            </form>
+            <span>
+                <span></span>
+            </span>
+            <p class="text-center" style="color: #6c757d; margin-top: 80px;">Don't have an account?<a href="{% url 'register' %}"> Register</a></p>
+            <br><br>
+        </div>
+    </div>
+{% endif %}
+</body>
+
+
+{% endblock %}

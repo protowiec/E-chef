@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+    <div id="registration-example" class="main bg-image shadow-2-strong" >
+        <div class="registration-container">
+
+            <form action="{% url 'register' %}" method="POST" class="appointment-form" id="appointment-form">
+                {% csrf_token %}
+                <h2>Register here chef !</h2>
+                {% include 'includes/alerts.html' %}
+                <div>
+                    <label></label>
+                    {{ form.first_name }} <!-- im not sure this gonna work -->
+                </div>
+                <div>
+                    <label></label>
+                    {{ form.last_name }}
+                </div>
+                <div>
+                    <label></label>
+                    {{ form.email }}
+                </div>
+                <div>
+                    <label></label>
+                    {{ form.phone_number }}
+                </div>
+                <div>
+                    <label></label>
+                    {{ form.password }}
+                </div>
+                <div>
+                    <label></label>
+                    {{ form.confirm_password }}
+                </div>
+                <div class="form-check" style="margin-top: 50px;">
+                    <input id="agree-term" class="agree-term" type="checkbox" name="agree-term">
+                    <label class="label-agree-term" for="agree-term">
+                        <span>
+                            <span></span>
+                        </span>
+                        I agree to the
+                        <a class="term-service" href="#">Terms and Conditions</a>
+                    </label>
+                </div>
+                <div class="form-submit">
+                    <input id="submit" class="submit btn-primary" type="submit" name="submit" value="     Submit     ">
+                </div>
+                {{ form.email.errors }}
+	            {{ form.non_field_errors }}
+                <span>
+                    <span></span>
+                </span>
+                <p class="text-center" style="color: #6c757d; margin-top: 80px;">Have an account? <a href="{% url 'login' %}">Log In</a></p>
+                <br><br>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+
+{% endblock %}

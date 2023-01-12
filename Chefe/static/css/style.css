@@ -1,0 +1,75 @@
+.projects {
+  background-image: url('../img/projects.jpg');
+  height: 250px;
+}
+
+.website {
+  height: 400px;
+}
+
+#intro-example {
+  background-image: url('../images/jpg/header_black_underline.jpg');
+  height: 400px;
+}
+
+  /* Height for devices larger than 992px */
+  @media (min-width: 992px) {
+    #intro-example {
+      height: 968px;
+      margin-bottom: 100px;
+    }
+  }
+
+#registration-example {
+  background-image: url('../images/jpg/header_clean.jpg');
+  height: 400px;
+}
+
+  /* Height for devices larger than 992px */
+  @media (min-width: 992px) {
+    #registration-example {
+      height: 968px;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+#verification-example {
+  background-image: url('../images/jpg/header_clean.jpg');
+  height: 400px;
+}
+
+  /* Height for devices larger than 992px */
+  @media (min-width: 992px) {
+    #verification-example {
+      height: 968px;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+.appointment-form {
+    padding: 50px 60px 70px;
+}
+
+#appointment-form {
+    padding: 50px 60px 70px;
+}
+
+.main {
+    padding :60px 0;
+    position: relative;
+}
+
+.registration-container {
+    width: 586px;
+    height: 839px;
+    background: #fff;
+    margin-left: 165px;
+    margin-top: 45px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+}
+
+

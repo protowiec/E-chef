@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=no">
+ <meta http-equiv="x-ua-compatible" content="ie=edge">
+ <meta name="description" content="Discover the most advanced platform for chef's.">
+ <meta name="keywords" content="Chef, Kitchen, Restaurant">
+ <meta property="og:title" content="E-Chef">
+ <meta name="author" content="E-Chef">
+ <meta name="robots" content="Chef">
+ <link rel="canonical" href="/">  <!-- later update -->
+ <meta property="og:locale" content="en_EN">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="/"> <!-- later update -->
+ <meta property="og:site_name" content="E-Chef - The Chef,s Website">
+ <title>E-Chef | The Chef's Website</title>
+ <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+ <!-- Font Awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ <!-- Google Fonts Roboto -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
+ <!-- MDB -->
+ <link rel="stylesheet" href="/static/css/bootstrap.css">
+ <link rel="stylesheet" href="/static/css/style.css">
+ <!-- jQuery -->
+ <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</head>
+{% include 'includes/navbar.html' %}
+
+{% block content %}
+
+
+{% endblock %}
